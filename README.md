@@ -1,6 +1,4 @@
-# 虚拟磁盘
-
-### 操作内容
+## 虚拟磁盘和FAT文件系统
 
 1. 通过vhd文件模拟机械磁盘，以FAT16方式分区，实现磁盘文件的复制、读取、删除等操作。
 2. 建立虚拟磁盘的缓冲文件系统，实现文件打开关闭、读写、定位等操作函数。
@@ -87,14 +85,13 @@ FILE的成员指针指向文件缓冲区，通过移动指针实现对文件的�
 
 ##### 其他相关函数
 
-重定位文件首函数
-void    myrewind(myFILE* myfp);
-指针移动控制函数
-void    myfseek(myFILE* myfp, int offset);
-获取指针当前位置函数
-int     myftell(myFILE* myfp);
-文件末尾检测函数
-bool    myfeof(myFILE* myfp);
+重定位文件首函数 `void myrewind(myFILE* myfp)`
+
+指针移动控制函数 `void myfseek(myFILE* myfp, int offset)`
+
+获取指针当前位置函数 `int myftell(myFILE* myfp)`
+
+文件末尾检测函数 `bool myfeof(myFILE* myfp)`
 
 
 
